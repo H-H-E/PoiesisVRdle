@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
   <script src="./aframe-keyboard.min.js"></script>
   <script src="https://unpkg.com/aframe-text-geometry-component/dist/aframe-text-geometry-component.min.js"></script>
   <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
@@ -40,6 +40,7 @@
 </head>
 
 <body>
+  <div class="loading-screen">Loading VR Experience...</div>
 
 
   <a-scene id="scene" keyboard-controls="false" keyboard-shortcuts="enterVR: false" cursor="rayOrigin:mouse" keyboard>
@@ -175,7 +176,7 @@
       </a-entity>
     </a-entity>
     <!-- VR -->
-    <a-entity laser-controls="hand: right" raycaster="far: 100; lineColor: white;"></a-entity>
+    <a-entity laser-controls="hand: right" raycaster="far: 100; lineColor: white; objects: [data-clickable]" class="controller"></a-entity>
     <!-- keyboard -->
     <a-text id="victory" font="dejavu" color="#00d600" value="" scale="0.5 0.5 0.5" position="-0.221 1.2 -0.7"></a-text>
     <a-entity id="input" position="-0.5 1.2 -0.7" text-geometry="value:; size:0.15"

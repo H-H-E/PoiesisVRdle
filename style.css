@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -10,8 +11,32 @@ a-scene {
   height: 100vh;
 }
 
-a-entity,
-a-sky,
-a-camera {
-  pointer-events: none;
+/* Responsive design */
+@media (max-width: 768px) {
+  #keyboard {
+    transform: scale(0.8);
+  }
+  
+  #logo {
+    transform: scale(0.7);
+  }
+}
+
+/* VR mode optimizations */
+[data-clickable] {
+  cursor: pointer;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 9999;
 }
