@@ -45,7 +45,7 @@
   <div class="loading-screen">Loading VR Experience...</div>
 
 
-  <a-scene id="scene" keyboard-controls="false" keyboard-shortcuts="enterVR: false" cursor="rayOrigin:mouse" keyboard embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+  <a-scene id="scene" keyboard-controls="false" keyboard-shortcuts="enterVR: false" cursor="rayOrigin:mouse" keyboard>
     <a-assets>
       <model id="model" src="VRdle/logoc.gltf" />
 
@@ -63,18 +63,15 @@
     <a-entity environment="preset: tron; 
                           groundColor: #0e172d; 
                           groundColor2: #0f2453; 
-                          grid: crosses;
+                          grid: 2;
                           gridColor: #0e52b2;
+                          skyType: gradient;
+                          skyColor: #1a2236;
                           horizonColor: #1a2236;
                           lighting: distant;
                           shadow: true;
                           shadowSize: 10;
                           dressing: none;
-                          dressingAmount: 0;
-                          dressingColor: #795449;
-                          dressingScale: 15;
-                          dressingVariance: 0;
-                          dressingUniformScale: true;
                           fog: 0.6;
                           flatShading: true;
                           playArea: 1;
@@ -196,7 +193,7 @@
       </a-entity>
     </a-entity>
     <!-- VR -->
-    <a-entity laser-controls="hand: right" raycaster="far: 100; lineColor: white; objects: [data-clickable]" class="controller"></a-entity>
+    <a-entity laser-controls="hand: right" raycaster="far: 100; objects: [data-clickable]" class="controller"></a-entity>
     <!-- keyboard -->
     <a-text id="victory" font="dejavu" color="#00d600" value="" scale="0.5 0.5 0.5" position="-0.221 1.2 -0.7"></a-text>
     <a-entity id="input" position="-0.5 1.2 -0.7" text-geometry="value:; size:0.15"
