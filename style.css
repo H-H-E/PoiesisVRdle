@@ -1,12 +1,17 @@
 body {
-    font-size: 62.5%;
-    overflow: hidden;
-  }
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
 
-  html,
-  body,
-  canvas {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-  }
+a-scene {
+  width: 100vw;
+  height: 100vh;
+}
+
+a-entity,
+a-sky,
+a-camera {
+  pointer-events: none;
+}
